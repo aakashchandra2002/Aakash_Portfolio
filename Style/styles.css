@@ -32,7 +32,7 @@ body{
 
 section{
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 5% 2rem;
 }
 
 .header{
@@ -75,7 +75,7 @@ section{
     color:var(--text-color);
     display:none;
 }
-
+/*------------ Home section in CSS-------------- */
 .home{
     display: flex;
     justify-content: center;
@@ -195,6 +195,58 @@ span{
     margin: 2rem 0 3rem;
 
 }
+/* -------------Education Section in CSS----------------- */
+.education{
+    margin-bottom: 5rem;
+}
+
+
+
+
+.education-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+  }
+  
+  .education-items:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+  
+  .education-items:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+
+
+
+
+
+
+
+
+/* -------------Internship Section in CSS---------------- */
+
+
+
+
+
+
+
+
+
 
 
 
