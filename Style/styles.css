@@ -33,6 +33,7 @@ body{
 section{
     min-height: 100vh;
     padding: 10rem 5% 2rem;
+    margin: auto;
 }
 
 .header{
@@ -95,6 +96,7 @@ span{
     color: var(--main-color);
 }
 
+
 .home-content h1{
     font-size: 5.6rem;
     font-weight: 700;
@@ -120,6 +122,7 @@ span{
 
 .home-content p {
     font-size: 1.6rem;
+    text-align: justify;
 }
 
 .social-media a{
@@ -164,7 +167,7 @@ span{
 
 
 /* ---------About Section in CSS--------- */
-.about {
+.about { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,49 +196,195 @@ span{
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    text-align: justify;
 
 }
 /* -------------Education Section in CSS----------------- */
-.education{
-    margin-bottom: 5rem;
+
+
+
+.box{
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 3rem 2rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .1rem solid var(--bg-color);
+    transition: .5s ease;
 }
 
+.box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
 
-
-
-.education-container {
+}
+.education-content .row{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: normal;
-    align-items: normal;
-    align-content: normal;
+    border-radius: 5px;
+    height: 400px;
+    margin-bottom: 250px;
   }
   
-  .education-items:nth-child(1) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
+  .education-content .title{
+    color: var(--main-color);
+  }
+  .education-content .row .education,
+  .education-content .row .skills
+  {
+    color: #e5e5e5;
+    flex:0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+  } 
+  .education-content  h3.title{
+    font-size:24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  .education-content .row.timeline-box{
+    flex:0 0 100%;
+    max-width: 100%;  
+  }
+  .education-content .row .timeline{
+    /* background-color:#e5e5e5; */
+    padding: 50px 35px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+  }
+  .education-content .row .timeline-item{
+    position:relative;
+    padding-left: 37px;
+    padding-bottom: 50px; 
+  }
+  .education-content .row  .skills .timeline-item{
+    position:relative;
+    padding-left: 37px;
+    padding-bottom: 30px; 
+  }
+  .education-content .row .timeline-item:last-child{
+    padding-bottom: 0;
+  }
+  .education-content .row .timeline-item::before{
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+  }
+  .education-content .row .circle-dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+  }
+  .education-content .row .timeline-title  {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .education-content .row .skills .timeline-title  {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    
+  }
+    
+  .education-content .row .timeline-text{
+    line-height: 25px;
+    font-size: 20px;
+    text-align: justify;
   }
   
-  .education-items:nth-child(2) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
+  /* CSS for Education Section */
+  .education-content .row .internship {
+    display: none;
   }
-
-
-
-
-
-
-
+  
+  .timeline-itemed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 30px;
+    padding-left: 35px;
+  }
+  
+  .timeline-contented {
+    display: flex;
+    flex: 1;
+  }
+  
+  .timeline-lefted {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  .timeline-righted {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .timeline-title1{
+    font-size: 20px;
+  }
+  .timeline-title3 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .timeline-title2 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .circle-doted {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+  }
+  
+  
+  
+  
+  /* CSS for Skills Section */
+  .skills-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .skills-box {
+    flex: 0 0 100%; /* Adjust width of skills box */
+    padding: 20px; /* Add padding to create a box around skills */
+     /* Add background color to skills box */
+  }
+  
+  .skills-box .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .skills-box .skills-list {
+    margin-top: 15px;
+  }
+  
 
 /* -------------Internship Section in CSS---------------- */
 
@@ -254,6 +403,7 @@ span{
 .expertise h2{
     margin-bottom: 5rem;
 }
+
 
 .expertise-container{
     display:flex;
@@ -291,6 +441,7 @@ span{
 .expertise-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+    text-align: justify;
 }
 
 /* ----------Portfolio Section in CSS--------- */
