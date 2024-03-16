@@ -48,9 +48,9 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .expertise-container, .portfolio-box, .contact-form', { origin: 'buttom' });
+ScrollReveal().reveal('.home-img, .expertise-container, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content,.timeline', { origin: 'right' });
 
 /*================== typed js ==============*/
 
