@@ -645,7 +645,20 @@ span{
         display: block;
     }
 
+    .education-content .row {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 50px;
+      }
+    .education-content .row .education,
+    .education-content .row .skills
+    {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-top: 30px;
+    }
 
+    
     .navbar {
         position: absolute;
         top:100%;
@@ -709,6 +722,7 @@ span{
     .portfolio-container{
         grid-template-columns: repeat(2,1fr);
     }
+
 
 }
 
