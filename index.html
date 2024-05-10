@@ -294,23 +294,35 @@
 
     <!------------ Contact Section Design----------->
     <section class="contact" id="contact">
+
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="mailto:aakashchandra2002@gmail.com">
+        <form name="submit-to-google-sheet">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name="Name" placeholder="Full Name">
+                <input type="email" name="Email"  placeholder="Email Address">
             </div>
 
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" name="MobileNo"placeholder="Mobile Number">
             </div>
-
             <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <input type="submit" name="Message" value="Send Message" class="btn">
         </form>
     </section>
+    
+    <!-- ----contactform@portfolio----- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx8YZIhSekWCF6SDyzjZrsodtEBVMysmDYCiKl4ATpV_VJOsQmyzBc-PDke9xfy8zrv3Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 
     <!--------------Footer Design--------------->
     <footer class="footer">
